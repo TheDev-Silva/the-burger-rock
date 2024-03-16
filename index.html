@@ -1,14 +1,341 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/output.css">
-    <title>The Burger Rock - O Jeito Rock de Servir!</title>
-</head>
-<body>
-    <h1>Primeiro projeto</h1>
-    <h2>Teste</h2>
-</body>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <title>The Burger Rock - O jeito Metaleiro de Servir</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="w-full min-h-[360px] justify-center items-center bg-Home bg-cover bg-[center] p-2"
+    >
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/logo.png"
+          alt="logo-TBR"
+          class="w-[200px] rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-white md:text-4xl text-3xl font-bold mt-4 mb-2">
+          O Jeito Metaleiro de Servir
+        </h1>
+        <span class="text-white font-medium md:text-xl text-[14px]"
+          >Rua Des. Carlos Pinheiro Guimaraes, 244 - Sitio Cercado -
+          Curitiba</span
+        >
+        <div class="bg-[#990000] rounded-md px-4 py-1 mt-5" id="date-span">
+          <span class="text-gray-300 font-medium uppercase"
+            >Seg a Dom - 18:00 as 22:00</span
+          >
+        </div>
+      </div>
+    </header>
+    <h2
+      class="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-9 md:mb-6"
+    >
+      conheça nosso menu
+    </h2>
+    <!-- inicio menu -->
+    <div id="menu" class="flex flex-col justify-center items-center">
+      <main
+        class="w-full content-center grid lg:grid-cols-3 md:grid-cols-2 gap-7 max-w-7xl p-2 md:p-5 mb-16"
+      >
+        <!-- 1 - produto item Big Mac -->
+        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+          <img
+            src="./assets/Big-Mac.png"
+            alt="Big-Mac-Duplo"
+            class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white p-5 rounded-xl"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Big Mac
+              </p>
+              <p class="text-sm">
+                Dois hambúrgueres (100% carne bovina), alface americana, queijo
+                cheddar, molho especial, cebola, picles e pão com gergelim.
+              </p>
+              <p>499Kcal</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 31,80</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-name="Big Mac"
+                data-price="31.80"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim produto item Big Mac-->
+        <!-- 2- produto item Big Mac Duplo-->
+        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+          <img
+            src="./assets/Big-Mac-Duplo.png"
+            alt="Big-Mac-Duplo"
+            class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white p-5 rounded-xl"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Big Mac Duplo
+              </p>
+              <p class="text-sm">
+                Quatro hambúrgueres de carne, alface americana, queijo
+                processado sabor cheddar, molho especial, cebola, picles e pão
+                com gergelim.
+              </p>
+              <p>692Kcal</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 37,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-name="Big Mac Duplo"
+                data-price="37.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim produto item Big Mac Duplo-->
+        <!-- 3- produto item Brabo Melt Crispy-->
+        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+          <img
+            src="./assets/Brabo-Melt-Crispy.png"
+            alt="Big-Mac-Duplo"
+            class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div class="w-full flex-col justify-between bg-white rounded-xl p-5">
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Brabo Melt Crispy
+              </p>
+              <p class="text-sm">
+                ambúrguer de carne 100% bovina, maionese especial com sabor de
+                carne defumada, cebola crispy, fatias de bacon , queijo cheddar.
+              </p>
+              <p>1.057Kcal</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 32,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-name="Brabo Melt Crispy"
+                data-price="32.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim produto item Brabo Melt Crispy-->
+        <!-- 4 - produto item McNífico Bacon-->
+        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+          <img
+            src="./assets/Mac-Nífico-Bacon.png"
+            alt="Big-Mac-Duplo"
+            class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-xl p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                McNífico Bacon
+              </p>
+              <p class="text-sm">
+                Um hambúrguer de carne, bacon, alface americana, cebola, queijo cheddar, tomate, maionese, ketchup, mostarda e pão com gergelim.
+              </p>
+              <p>Calorias: 640 kcal</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 17,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-name="McNífico Bacon"
+                data-price="17.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim produto item McNífico Bacon-->
+        <!-- 5 - produto item Cheeseburger-->
+        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/Cheeseburger.png"
+            alt="Big-Mac-Duplo"
+            class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Cheeseburger
+              </p>
+              <p class="text-sm">
+                Um hamburguer de carne, queijo processado cheddar,
+                cebola, picles, ketchup, mostarda e pão sem gergelim.
+              </p>
+              <p>298Kcal</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 9,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-name="Cheeseburger"
+                data-price="9.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim produto item Cheeseburger-->
+        <!-- produto item McCrispy Chicken Elite-->
+        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+          <img
+            src="./assets/McCrispy-Chicken-Elite.png"
+            alt="Big-Mac-Duplo"
+            class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                McCrispy Chicken Elite
+              </p>
+              <p class="text-sm">
+                Pão tipo brioche, molho Honey & Fire, bacon em fatias, alface,
+                tomate, queijo cheddar e carne 100% de peito de frango.
+              </p>
+              <p>704Kcal</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 31,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-name="McCrispy Chicken Elite"
+                data-price="31.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim produto item McCrispy Chicken Elite -->
+      </main>
+      <div class="mx-auto max-w-7xl px-2 my-2 bg-slate-400">
+         <h2 class="font-bold text-3xl">Bebidas</h2>
+      </div>
+      <!-- grid Bebidas -->
+      <!-- 1 Bebida -->
+      <div class="w-full content-center grid lg:grid-cols-3 md:grid-cols-2 gap-7 max-w-7xl p-2 md:p-5 mb-16" id="menu">
+
+         <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+            <img
+              src="./assets/coca-cola.png"
+              alt="Big-Mac-Duplo"
+              class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div
+              class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+            >
+              <div>
+                <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                  Coca-Cola
+                </p>
+                <p class="flex text-sm items-center gap-2">
+                  <input type="checkbox" value="true" onclick="return false" class="text-black ">
+                  Com adição de açúcares.
+                </p>
+                <p>350ml</p>
+              </div>
+  
+              <div class="flex justify-between items-center mt-3">
+                <p class="font-bold text-lg">R$ 4,90</p>
+                <button
+                  class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                  data-name="Coca-Cola Zero"
+                  data-price="5.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Fim bebia coca-cola normal -->
+          <!-- 2 - bebida coca-cola zero -->
+          <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+            <img
+              src="./assets/coca-cola-zero.png"
+              alt="Big-Mac-Duplo"
+              class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+            />
+  
+            <div
+              class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+            >
+              <div>
+                <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                  Coca-Cola Zero
+                </p>
+                <p class="flex text-sm items-center gap-2">
+                  <input type="checkbox" value="true" checked onclick="return false" class="text-black ">
+                  Sem adição de açúcares.
+                </p>
+                <p>350ml</p>
+              </div>
+  
+              <div class="flex justify-between items-center mt-3">
+                <p class="font-bold text-lg">R$ 4,90</p>
+                <button
+                  class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                  data-name="Coca-Cola"
+                  data-price="4.90"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- fim menu -->
+  </body>
 </html>
