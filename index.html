@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./styles/output.css" />
     <title>The Burger Rock - O jeito Metaleiro de Servir</title>
   </head>
@@ -32,25 +33,33 @@
           >Rua Des. Carlos Pinheiro Guimaraes, 244 - Sitio Cercado -
           Curitiba</span
         >
-        <div class="bg-[#990000] rounded-md px-4 py-1 mt-5" id="date-span">
-          <span class="text-gray-300 font-medium uppercase"
-            >Seg a Dom - 18:00 as 22:00</span
-          >
+        <div class="bg-red-500 rounded-md px-4 py-1 mt-5" id="date-span">
+          <span class="text-gray-300 font-medium uppercase">
+            Seg a Dom - 18:00 as 22:00
+          </span>
         </div>
       </div>
     </header>
     <h2
-      class="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-9 md:mb-6"
+      class="md:text-4xl sm:text-3xl text-2xl font-bold text-center mt-9 pb-2 bg-black text-white uppercase"
     >
       conheça nosso menu
     </h2>
+
     <!-- inicio menu -->
-    <div id="menu" class="flex flex-col justify-center items-center">
+    <div id="menu" class="flex flex-col justify-center items-center px-6 mb-16">
+      <div class="max-w-7xl m-5">
+        <h2 class="font-bold md:text-3xl text-lg">
+          <i class="fa-solid fa-burger tracking-[4px]"> Hamburgueres </i>
+        </h2>
+      </div>
       <main
-        class="w-full content-center grid lg:grid-cols-3 md:grid-cols-2 gap-7 max-w-7xl p-2 md:p-5 mb-16"
+        class="w-full content-center grid lg:grid-cols-3 md:grid-cols-2 gap-7 max-w-7xl md:p-2"
       >
         <!-- 1 - produto item Big Mac -->
-        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
           <img
             src="./assets/Big-Mac.png"
             alt="Big-Mac-Duplo"
@@ -65,8 +74,8 @@
                 Big Mac
               </p>
               <p class="text-sm">
-                Dois hambúrgueres (100% carne bovina), alface americana, queijo
-                cheddar, molho especial, cebola, picles e pão com gergelim.
+                Dois hambúrgueres carne, alface americana, queijo cheddar, molho
+                especial, cebola, picles e pão com gergelim.
               </p>
               <p>499Kcal</p>
             </div>
@@ -75,6 +84,7 @@
               <p class="font-bold text-lg">R$ 31,80</p>
               <button
                 class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/Big-Mac.png"
                 data-name="Big Mac"
                 data-price="31.80"
               >
@@ -85,7 +95,9 @@
         </div>
         <!-- fim produto item Big Mac-->
         <!-- 2- produto item Big Mac Duplo-->
-        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
           <img
             src="./assets/Big-Mac-Duplo.png"
             alt="Big-Mac-Duplo"
@@ -111,6 +123,7 @@
               <p class="font-bold text-lg">R$ 37,90</p>
               <button
                 class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/Big-Mac-Duplo.png"
                 data-name="Big Mac Duplo"
                 data-price="37.90"
               >
@@ -121,7 +134,9 @@
         </div>
         <!-- fim produto item Big Mac Duplo-->
         <!-- 3- produto item Brabo Melt Crispy-->
-        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
           <img
             src="./assets/Brabo-Melt-Crispy.png"
             alt="Big-Mac-Duplo"
@@ -144,6 +159,7 @@
               <p class="font-bold text-lg">R$ 32,90</p>
               <button
                 class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/Brabo-Melt-Crispy.png"
                 data-name="Brabo Melt Crispy"
                 data-price="32.90"
               >
@@ -154,7 +170,9 @@
         </div>
         <!-- fim produto item Brabo Melt Crispy-->
         <!-- 4 - produto item McNífico Bacon-->
-        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
           <img
             src="./assets/Mac-Nífico-Bacon.png"
             alt="Big-Mac-Duplo"
@@ -169,7 +187,8 @@
                 McNífico Bacon
               </p>
               <p class="text-sm">
-                Um hambúrguer de carne, bacon, alface americana, cebola, queijo cheddar, tomate, maionese, ketchup, mostarda e pão com gergelim.
+                Um hambúrguer de carne, bacon, alface americana, cebola, queijo
+                cheddar, tomate, maionese, ketchup, mostarda e pão com gergelim.
               </p>
               <p>Calorias: 640 kcal</p>
             </div>
@@ -178,6 +197,7 @@
               <p class="font-bold text-lg">R$ 17,00</p>
               <button
                 class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/Mac-Nífico-Bacon.png"
                 data-name="McNífico Bacon"
                 data-price="17.00"
               >
@@ -188,7 +208,8 @@
         </div>
         <!-- fim produto item McNífico Bacon-->
         <!-- 5 - produto item Cheeseburger-->
-        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
         >
           <img
             src="./assets/Cheeseburger.png"
@@ -204,8 +225,8 @@
                 Cheeseburger
               </p>
               <p class="text-sm">
-                Um hamburguer de carne, queijo processado cheddar,
-                cebola, picles, ketchup, mostarda e pão sem gergelim.
+                Um hamburguer de carne, queijo processado cheddar, cebola,
+                picles, ketchup, mostarda e pão sem gergelim.
               </p>
               <p>298Kcal</p>
             </div>
@@ -214,6 +235,7 @@
               <p class="font-bold text-lg">R$ 9,90</p>
               <button
                 class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="/assets/Cheeseburger.png"
                 data-name="Cheeseburger"
                 data-price="9.90"
               >
@@ -224,7 +246,9 @@
         </div>
         <!-- fim produto item Cheeseburger-->
         <!-- produto item McCrispy Chicken Elite-->
-        <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
           <img
             src="./assets/McCrispy-Chicken-Elite.png"
             alt="Big-Mac-Duplo"
@@ -249,6 +273,7 @@
               <p class="font-bold text-lg">R$ 31,90</p>
               <button
                 class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/McCrispy-Chicken-Elite.png"
                 data-name="McCrispy Chicken Elite"
                 data-price="31.90"
               >
@@ -259,83 +284,306 @@
         </div>
         <!-- fim produto item McCrispy Chicken Elite -->
       </main>
-      <div class="mx-auto max-w-7xl px-2 my-2 bg-slate-400">
-         <h2 class="font-bold text-3xl">Bebidas</h2>
+
+      <div class="max-w-7xl m-5">
+        <h2 class="font-bold md:text-3xl text-lg">
+          <i class="fa-solid fa-wine-bottle tracking-[4px]"> Bebidas </i>
+        </h2>
       </div>
       <!-- grid Bebidas -->
       <!-- 1 Bebida -->
-      <div class="w-full content-center grid lg:grid-cols-3 md:grid-cols-2 gap-7 max-w-7xl p-2 md:p-5 mb-16" id="menu">
+      <div
+        class="w-full content-center grid lg:grid-cols-3 md:grid-cols-2 gap-7 max-w-7xl md:p-2"
+        id="menu"
+      >
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/coca-cola.png"
+            alt="Big-Mac-Duplo"
+            class="w-44 h-44 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
 
-         <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
-            <img
-              src="./assets/coca-cola.png"
-              alt="Big-Mac-Duplo"
-              class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
-            />
-  
-            <div
-              class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
-            >
-              <div>
-                <p class="md:text-2xl text-lg uppercase font-bold mb-2">
-                  Coca-Cola
-                </p>
-                <p class="flex text-sm items-center gap-2">
-                  <input type="checkbox" value="true" onclick="return false" class="text-black ">
-                  Com adição de açúcares.
-                </p>
-                <p>350ml</p>
-              </div>
-  
-              <div class="flex justify-between items-center mt-3">
-                <p class="font-bold text-lg">R$ 4,90</p>
-                <button
-                  class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
-                  data-name="Coca-Cola Zero"
-                  data-price="5.50"
-                >
-                  <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-              </div>
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Coca-Cola
+              </p>
+              <p class="text-sm">Com adição de açúcares.</p>
+              <p>350ml</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 4,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="/assets/coca-cola.png"
+                data-name="Coca-Cola Zero"
+                data-price="5.50"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
             </div>
           </div>
-          <!-- Fim bebia coca-cola normal -->
-          <!-- 2 - bebida coca-cola zero -->
-          <div class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center">
-            <img
-              src="./assets/coca-cola-zero.png"
-              alt="Big-Mac-Duplo"
-              class="w-40 h-40 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
-            />
-  
-            <div
-              class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
-            >
-              <div>
-                <p class="md:text-2xl text-lg uppercase font-bold mb-2">
-                  Coca-Cola Zero
-                </p>
-                <p class="flex text-sm items-center gap-2">
-                  <input type="checkbox" value="true" checked onclick="return false" class="text-black ">
-                  Sem adição de açúcares.
-                </p>
-                <p>350ml</p>
-              </div>
-  
-              <div class="flex justify-between items-center mt-3">
-                <p class="font-bold text-lg">R$ 4,90</p>
-                <button
-                  class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
-                  data-name="Coca-Cola"
-                  data-price="4.90"
-                >
-                  <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-              </div>
+        </div>
+        <!-- Fim bebia coca-cola normal -->
+        <!-- 2 - bebida coca-cola zero -->
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/coca-cola-zero.png"
+            alt="Big-Mac-Duplo"
+            class="w-44 h-44 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Coca-Cola Zero
+              </p>
+              <p class="text-sm">Sem adição de açúcares.</p>
+              <p>350ml</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 4,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/coca-cola-zero.png"
+                data-name="Coca-Cola"
+                data-price="4.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
             </div>
           </div>
+        </div>
+        <!-- fim coca-cola zero -->
+        <!-- 3 - bebida guaraná -->
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/guarana.png"
+            alt="guarana"
+            class="w-44 h-44 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Guaraná
+              </p>
+              <p class="text-sm">Com adição de açúcares.</p>
+              <p>350ml</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 3,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/guarana.png"
+                data-name="Guaraná"
+                data-price="3.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim guaraná -->
+        <!-- 4 - bebida guaraná zero -->
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/guarana-zero.png"
+            alt="guarana"
+            class="w-44 h-44 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Guaraná Zero
+              </p>
+              <p class="text-sm">Sem adição de açúcares.</p>
+              <p>350ml</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 4,50</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/guarana-zero.png"
+                data-name="Guaraná Zero"
+                data-price="4.50"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim guaraná zero -->
+        <!-- 5 - bebida pepsi -->
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/Cola-Pepsi.png"
+            alt="guarana"
+            class="w-44 h-44 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">Pepsi</p>
+              <p class="text-sm">Com adição de açúcares.</p>
+              <p>350ml</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 4,10</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/Cola-Pepsi.png"
+                data-name="Pepsi"
+                data-price="4.10"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim pepsi -->
+        <!-- 6 - bebida pepsi zero -->
+        <div
+          class="flex md:flex md:flex-col gap-4 bg-black p-2 md:p-5 rounded-xl items-center"
+        >
+          <img
+            src="./assets/Cola-pepsi-black.png"
+            alt="guarana"
+            class="w-44 h-44 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+          />
+
+          <div
+            class="w-full flex flex-col justify-between bg-white rounded-lg p-5"
+          >
+            <div>
+              <p class="md:text-2xl text-lg uppercase font-bold mb-2">
+                Pepsi Black Zero
+              </p>
+              <p class="text-sm">Sem adição de açúcares.</p>
+              <p>350ml</p>
+            </div>
+
+            <div class="flex justify-between items-center mt-3">
+              <p class="font-bold text-lg">R$ 4,70</p>
+              <button
+                class="bg-gray-900 px-5 rounded-md add-to-cart-btn"
+                data-image="./assets/Cola-pepsi-black.png"
+                data-name="Pepsi Zero"
+                data-price="4.70"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim pepsi zero-->
       </div>
     </div>
-    <!-- fim menu -->
+    <!-- fim menu BEBIDAS -->
+    <!-- incio Cart Modal -->
+    <div
+      class="w-full h-full bg-black/50 fixed top-0 left-0 z-[90] hidden items-center justify-center"
+      id="cart-modal"
+    >
+      <div
+        class="flex flex-col min-w-[90%] md:min-w-[600px] rounded-md bg-white p-5 gap-2"
+      >
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+        <div
+          class="flex justify-between mb-2 flex-col gap-3 overflow-y-auto"
+          id="cart-items"
+          style="max-height: 250px"
+        ></div>
+        <p class="font-medium">
+          Total: <span id="cart-total" class="font-bold">0.00</span>
+        </p>
+
+        <p class="font-medium">Cliente: </p>
+        <input
+          type="text"
+          placeholder="Digite seu nome"
+          id="userName"
+          class="w-full border-2 p-1 rounded my-1 capitalize"
+        />
+        <p class="text-red-700 text-sm hidden font-medium" id="userName-warn">
+         * digite seu seu nome!
+       </p>
+
+        <p class="font-medium">Endereço de entrega:</p>
+        <input
+          type="text"
+          placeholder="Digite seu endereço"
+          id="address"
+          class="w-full border-2 p-1 rounded my-1 capitalize"
+        />
+        <p class="text-red-700 text-sm hidden font-medium" id="address-warn">
+          * digite seu endereço de entrega!
+        </p>
+        <div class="w-full flex items-center justify-between mt-4">
+          <button id="closed-modal-btn" class="hover:text-red-500">
+            Fechar
+          </button>
+          <button id="checkout-btn" class="bg-black text-white rounded-lg p-2">
+            Finalizar Pedido
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Incio do Alert -->
+    <div
+      class="w-full h-full bg-black/80 fixed top-0 left-0 z-[90] items-center justify-center p-4"
+      id="cart-alert"
+    >
+      <div
+        class="flex flex-col min-w-[90%] md:min-w-[600px] h-[200px] rounded-md bg-white p-5 gap-2 items-center justify-between"
+      >
+        <h2 class="text-center font-bold text-lg md:text-2xl mb-2">
+         Estamos fora do nosso Horário de Atendimento
+        </h2>
+        <p>SEGUNDA A DOMINGO DAS 18 AS 22 HORAS</p>
+        <i class="fa-regular fa-face-frown md:text-7xl text-4xl"></i>
+      </div>
+    </div>
+    <!-- Fim do Alert -->
+    <!-- Fim cart Modal -->
+    <!-- footer cart -->
+    <footer
+      class="w-full flex items-center justify-center bg-black py-4 fixed z-40 bottom-0 text-white"
+    >
+      <button class="flex items-center justify-center gap-2" id="cart-btn">
+        (<span id="cart-count">0</span>)
+        <h1>Veja seu carrinho</h1>
+        <i class="fa fa-cart-plus text-lg"></i>
+      </button>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
